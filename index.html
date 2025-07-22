@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客戶經驗問卷</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      padding: 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      margin-top: 2em;
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    .checkbox-group, .radio-group {
+      margin-top: 0.5em;
+    }
+    .checkbox-group label, .radio-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 2em;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>客戶經驗問卷 Customer Experience Survey</h1>
+  <p>請點擊下方按鈕填寫完整問卷：</p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScYpNeiAPXkNyACUtDCJkRK_8llLVDMBXsMOEzQXxpsyJzFfQ/viewform" target="_blank"><button>前往填寫 Google 表單</button></a></p>
+  <p>以下為問卷主要內容摘要，供您預覽：</p>
+
+  <h2>P1 - 基本資料</h2>
+  <form>
+    <label>您的姓名是？
+      <input type="text" name="entry.name" required>
+    </label>
+
+    <label>您的年齡層是？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.age" value="20 歲以下"> 20 歲以下</label>
+      <label><input type="radio" name="entry.age" value="20–29 歲"> 20–29 歲</label>
+      <label><input type="radio" name="entry.age" value="30–39 歲"> 30–39 歲</label>
+      <label><input type="radio" name="entry.age" value="40–49 歲"> 40–49 歲</label>
+      <label><input type="radio" name="entry.age" value="50–59 歲"> 50–59 歲</label>
+      <label><input type="radio" name="entry.age" value="60 歲以上"> 60 歲以上</label>
+    </div>
+
+    <label>請簡述您目前的工作角色
+      <input type="text" name="entry.role">
+    </label>
+
+    <label>您目前所屬的產業背景為何？
+      <input type="text" name="entry.industry">
+    </label>
+
+    <label>您目前居住或工作的地區是？
+      <input type="text" name="entry.location">
+    </label>
+
+    <label>您平時主要透過哪些平台獲取自我成長或學習資源？（可複選）</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="entry.platform" value="Facebook"> Facebook</label>
+      <label><input type="checkbox" name="entry.platform" value="Instagram"> Instagram</label>
+      <label><input type="checkbox" name="entry.platform" value="YouTube"> YouTube</label>
+      <label><input type="checkbox" name="entry.platform" value="Podcast"> Podcast</label>
+      <label><input type="checkbox" name="entry.platform" value="Medium 或部落格"> Medium 或部落格</label>
+      <label><input type="checkbox" name="entry.platform" value="線上課程平台"> 線上課程平台</label>
+      <label><input type="checkbox" name="entry.platform" value="書籍或電子書"> 書籍或電子書</label>
+      <label><input type="checkbox" name="entry.platform" value="其他"> 其他（請說明）</label>
+    </div>
+
+    <h2>P2 - 服務參與軌跡</h2>
+    
+    <label>您結束的最高課程階段為何？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.level" value="優勢領導工作坊：初階"> 優勢領導工作坊：初階</label>
+      <label><input type="radio" name="entry.level" value="優勢領導工作坊：中階"> 優勢領導工作坊：中階</label>
+      <label><input type="radio" name="entry.level" value="優勢領導工作坊：高階" id="level-high"> 優勢領導工作坊：高階</label>
+    </div>
+
+    <div id="graduate-options" style="display:none">
+      <label>若您有參與畢業生課程，請勾選您曾參與的課程（可複選）：</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="entry.graduate" value="Tabula Rasa"> Tabula Rasa</label>
+        <label><input type="checkbox" name="entry.graduate" value="LWC"> LWC</label>
+        <label><input type="checkbox" name="entry.graduate" value="CFA"> CFA</label>
+        <label><input type="checkbox" name="entry.graduate" value="內在力量"> 內在力量</label>
+        <label><input type="checkbox" name="entry.graduate" value="綻放人生工作坊"> 綻放人生工作坊</label>
+        <label><input type="checkbox" name="entry.graduate" value="武士之道"> 武士之道</label>
+        <label><input type="checkbox" name="entry.graduate" value="大師"> 大師</label>
+        <label><input type="checkbox" name="entry.graduate" value="陰影工作坊"> 陰影工作坊</label>
+        <label><input type="checkbox" name="entry.graduate" value="其他"> 其他（請說明）</label>
+      </div>
+    </div>
+
+   <h3>助教制度經驗分享</h3>
+    <label>您是否曾擔任過工作坊助教 / senior / 教練角色？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.assist_role" value="僅曾任初階／中階助教以及其他工作坊 senior"> 僅曾任初階／中階助教以及其他工作坊 senior</label>
+      <label><input type="radio" name="entry.assist_role" value="曾任高階教練並擔任過其他畢業生課程 senior"> 曾任高階教練並擔任過其他畢業生課程 senior</label>
+    </div>
+    <label>您覺得擔任工作坊助教／教練的實質經驗是？（請簡單描述）</label>
+    <textarea name="entry.coaching_experience" rows="3"></textarea>
+
+    <label>您是否有將課程所學應用於助教／教練的經驗中？請評分（1～10）</label>
+    <input type="number" name="entry.apply_score" min="1" max="10">
+
+    <label>未來若有機會，您是否有意願再次擔任助教／教練角色？</label>
+    <div class="radio-group">
+      <label><input type="radio" name="entry.future_intent" value="絕對會"> 絕對會</label>
+      <label><input type="radio" name="entry.future_intent" value="看工作坊型態而定"> 看工作坊型態而定</label>
+      <label><input type="radio" name="entry.future_intent" value="有興趣但不是絕對"> 有興趣但不是絕對</label>
+      <label><input type="radio" name="entry.future_intent" value="不考慮"> 不考慮</label>
+    </div>
+
+    
+
+      <div id="assistant-basic" style="display:none">
+        <label>請填寫擔任初階／中階助教／senior 的次數：</label>
+        <input type="text" name="entry.assist_basic_count">
+
+        <label>請簡述您的參與經驗：</label>
+        <textarea name="entry.assist_basic_exp" rows="3"></textarea>
+      </div>
+
+      <div id="assistant-advanced" style="display:none">
+        <label>請填寫擔任高階教練及畢業生課程 senior 的次數：</label>
+        <input type="text" name="entry.assist_adv_count">
+
+        <label>請簡述您的參與經驗：</label>
+        <textarea name="entry.assist_adv_exp" rows="3"></textarea>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        const levelRadios = document.querySelectorAll('input[name="entry.level"]');
+        const graduateSection = document.getElementById('graduate-options');
+        const assistantSection = document.getElementById('assistant-options');
+
+        levelRadios.forEach(radio => {
+          radio.addEventListener('change', () => {
+            if (radio.value === '優勢領導工作坊：高階') {
+              graduateSection.style.display = 'block';
+              assistantSection.style.display = 'block';
+            } else {
+              graduateSection.style.display = 'none';
+              assistantSection.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+
+  <h2>P3 - housekeeping</h2>
+<h3>一、整體體驗</h3>
+<label>您覺得整體原有報名流程是否順暢？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.signup_flow" value="非常順暢"> 非常順暢</label>
+  <label><input type="radio" name="entry.signup_flow" value="還算順暢"> 還算順暢</label>
+  <label><input type="radio" name="entry.signup_flow" value="普通"> 普通</label>
+  <label><input type="radio" name="entry.signup_flow" value="有些困難"> 有些困難</label>
+  <label><input type="radio" name="entry.signup_flow" value="非常困難"> 非常困難</label>
+</div>
+<label>報名過程中，您有曾經感到困惑的地方嗎？如果有，請分享。</label>
+<textarea name="entry.signup_difficulties" rows="3"></textarea>
+
+<h3>二、資訊清楚程度</h3>
+<label>報名相關資訊是否清楚、容易理解？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.signup_info_clarity" value="非常清楚"> 非常清楚</label>
+  <label><input type="radio" name="entry.signup_info_clarity" value="大致清楚"> 大致清楚</label>
+  <label><input type="radio" name="entry.signup_info_clarity" value="普通"> 普通</label>
+  <label><input type="radio" name="entry.signup_info_clarity" value="資訊不夠清楚"> 資訊不夠清楚</label>
+  <label><input type="radio" name="entry.signup_info_clarity" value="很混亂"> 很混亂</label>
+</div>
+<label>您是在哪裡看到報名資訊的？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.signup_source" value="LINE 群組"> LINE 群組</label>
+  <label><input type="checkbox" name="entry.signup_source" value="官方網站"> 官方網站</label>
+  <label><input type="checkbox" name="entry.signup_source" value="社群媒體"> 社群媒體</label>
+  <label><input type="checkbox" name="entry.signup_source" value="教練或朋友轉發"> 教練或朋友轉發</label>
+  <label><input type="checkbox" name="entry.signup_source" value="Email"> Email</label>
+  <label><input type="checkbox" name="entry.signup_source" value="其他"> 其他</label>
+</div>
+
+<h3>三、技術介面體驗</h3>
+<label>您覺得使用我們的報名系統（如表單、LINE、付款連結等）是否方便？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.signup_tech" value="非常方便"> 非常方便</label>
+  <label><input type="radio" name="entry.signup_tech" value="還算方便"> 還算方便</label>
+  <label><input type="radio" name="entry.signup_tech" value="普通"> 普通</label>
+  <label><input type="radio" name="entry.signup_tech" value="不太方便"> 不太方便</label>
+  <label><input type="radio" name="entry.signup_tech" value="非常不便"> 非常不便</label>
+</div>
+<label>報名過程中是否曾遇到技術問題？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.signup_errors" value="是"> 是</label>
+  <label><input type="radio" name="entry.signup_errors" value="否"> 否</label>
+</div>
+<label>若是，請簡述遇到的情況：</label>
+<textarea name="entry.signup_error_details" rows="3"></textarea>
+
+
+<h3>優化建議</h3>
+<label>如果可以改善一件事，讓報名流程更理想，您會建議什麼？</label>
+<textarea name="entry.signup_optimization" rows="3"></textarea>
+
+<label>實際報名過幾次我們課程？</label>
+<input type="text" name="entry.signup_history">
+
+<label>曾因報名困難放棄參加課程？</label>
+<input type="text" name="entry.signup_abandon">
+    
+ <h2>課前服務</h2>  
+ <h3>聯繫過程溝通體驗</h3>  
+<label>1.您覺得每一通電話中，對方的溝通與說明是否清楚明確？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.call_clarity" value="非常清楚"> 非常清楚</label>
+  <label><input type="radio" name="entry.call_clarity" value="還算清楚"> 還算清楚</label>
+  <label><input type="radio" name="entry.call_clarity" value="普通"> 普通</label>
+  <label><input type="radio" name="entry.call_clarity" value="有點模糊"> 有點模糊</label>
+  <label><input type="radio" name="entry.call_clarity" value="非常不清楚"> 非常不清楚</label>
+</div>
+
+<label>2.與教練訪談的經驗中，您是否覺得能自在地表達自己當下的狀態與期待？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.expression_comfort" value="非常自在"> 非常自在</label>
+  <label><input type="radio" name="entry.expression_comfort" value="還算自在"> 還算自在</label>
+  <label><input type="radio" name="entry.expression_comfort" value="普通"> 普通</label>
+  <label><input type="radio" name="entry.expression_comfort" value="有點拘謹"> 有點拘謹</label>
+  <label><input type="radio" name="entry.expression_comfort" value="非常不自在"> 非常不自在</label>
+</div>
+
+<label>3.教練的課前訪談是否幫助您釐清參與這門課的動機與準備方向？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.pre_class_help" value="幫助很大"> 幫助很大</label>
+  <label><input type="radio" name="entry.pre_class_help" value="有些幫助"> 有些幫助</label>
+  <label><input type="radio" name="entry.pre_class_help" value="不太有幫助"> 不太有幫助</label>
+  <label><input type="radio" name="entry.pre_class_help" value="完全沒有幫助"> 完全沒有幫助</label>
+</div>
+
+<label>4.整體而言，您覺得這樣的課前服務對您的學習準備是否有幫助？（1～5分）</label>
+<input type="number" name="entry.prep_score" min="1" max="5">
+
+<label>5.您是否對對課前服務的流程、時間、方式有任何建議？</label>
+<textarea name="entry.pre_class_feedback" rows="3"></textarea>
+
+
+<h2>課後關注</h2>
+
+<label>1. 以下哪些形式的課後關注您有收到？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.post_contact" value="LINE 訊息或社群公告"> LINE 訊息或社群公告</label>
+  <label><input type="checkbox" name="entry.post_contact" value="電話或簡訊回訪"> 電話或簡訊回訪</label>
+  <label><input type="checkbox" name="entry.post_contact" value="課後問卷邀請"> 課後問卷邀請</label>
+  <label><input type="checkbox" name="entry.post_contact" value="延伸活動資訊"> 延伸活動資訊</label>
+  <label><input type="checkbox" name="entry.post_contact" value="教練或助教的私訊關心"> 教練或助教的私訊關心</label>
+  <label><input type="checkbox" name="entry.post_contact" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>2. 若曾與工作人員／教練後續互動，您是否感覺他們仍清楚記得您的背景或狀態？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.memory" value="很清楚"> 很清楚</label>
+  <label><input type="radio" name="entry.memory" value="大致記得"> 大致記得</label>
+  <label><input type="radio" name="entry.memory" value="不太確定"> 不太確定</label>
+  <label><input type="radio" name="entry.memory" value="沒有這樣的經驗"> 沒有這樣的經驗</label>
+</div>
+
+<label>3. 在課程結束後，您是否會想持續與我們保持連結？</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.reconnect" value="非常希望"> 非常希望</label>
+  <label><input type="radio" name="entry.reconnect" value="可以偶爾接收資訊"> 可以偶爾接收資訊</label>
+  <label><input type="radio" name="entry.reconnect" value="目前沒有想法"> 目前沒有想法</label>
+  <label><input type="radio" name="entry.reconnect" value="不太希望"> 不太希望</label>
+</div>
+
+<label>4. 若未來有下列支持形式，哪些是您希望我們提供的？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.support_type" value="課後討論會或小組交流"> 課後討論會或小組交流</label>
+  <label><input type="checkbox" name="entry.support_type" value="教練一對一延伸督導"> 教練一對一延伸督導</label>
+  <label><input type="checkbox" name="entry.support_type" value="延伸課程推薦／地圖說明"> 延伸課程推薦／地圖說明</label>
+  <label><input type="checkbox" name="entry.support_type" value="同梯學員社群經營（LINE群、定期聚會）"> 同梯學員社群經營（LINE群、定期聚會）</label>
+  <label><input type="checkbox" name="entry.support_type" value="主題型線上或實體聚會"> 主題型線上或實體聚會</label>
+  <label><input type="checkbox" name="entry.support_type" value="品牌活動或講座資訊"> 品牌活動或講座資訊</label>
+  <label><input type="checkbox" name="entry.support_type" value="其他"> 其他建議（請說明）</label>
+</div>
+<h2>交通及硬體</h2>
+
+<label>您在參加實體課程時，交通是否便利？</label>
+<input type="text" name="entry.transportation">
+
+<label>您是否使用過我們的網站來查詢或報名課程？請簡述您的體驗：</label>
+<textarea name="entry.website_experience" rows="3"></textarea>
+
+<label>您是否使用過 LINE 群組或官方帳號？請簡述用途與感受：</label>
+<textarea name="entry.line_experience" rows="3"></textarea>
+<h2>P4 - 課程內容與學習期待</h2>
+
+<label>1. 未來若我們推出新課程，您最有興趣的主題是？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.future_topics" value="領導力發展"> 領導力發展</label>
+  <label><input type="checkbox" name="entry.future_topics" value="教練技巧"> 教練技巧</label>
+  <label><input type="checkbox" name="entry.future_topics" value="情緒覺察與管理"> 情緒覺察與管理</label>
+  <label><input type="checkbox" name="entry.future_topics" value="人際關係與溝通"> 人際關係與溝通</label>
+  <label><input type="checkbox" name="entry.future_topics" value="自我整合與內在探索"> 自我整合與內在探索</label>
+  <label><input type="checkbox" name="entry.future_topics" value="團隊經營與組織發展"> 團隊經營與組織發展</label>
+  <label><input type="checkbox" name="entry.future_topics" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>2. 您偏好的課程／長度為何？（單選）</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.preferred_duration" value="3 小時內"> 3 小時內</label>
+  <label><input type="radio" name="entry.preferred_duration" value="一日工作坊"> 一日工作坊</label>
+  <label><input type="radio" name="entry.preferred_duration" value="一個完整週末工作坊"> 一個完整週末工作坊</label>
+  <label><input type="radio" name="entry.preferred_duration" value="每週一次，共 4–8 週的系列課程"> 每週一次，共 4–8 週的系列課程</label>
+  <label><input type="radio" name="entry.preferred_duration" value="彈性自學（如錄播、模組化內容）"> 彈性自學（如錄播、模組化內容）</label>
+  <label><input type="radio" name="entry.preferred_duration" value="其他"> 其他建議（請說明）</label>
+</div>
+
+<label>3. 在過往課程中，哪一種學習方式對您最有幫助？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.learning_style" value="講師講授與案例說明"> 講師講授與案例說明</label>
+  <label><input type="checkbox" name="entry.learning_style" value="分組討論或情境模擬"> 分組討論或情境模擬</label>
+  <label><input type="checkbox" name="entry.learning_style" value="實作練習（如練習覺察、領導或教練技巧）"> 實作練習（如練習覺察、領導或教練技巧）</label>
+  <label><input type="checkbox" name="entry.learning_style" value="個人反思與書寫練習"> 個人反思與書寫練習</label>
+  <label><input type="checkbox" name="entry.learning_style" value="夥伴練習與彼此回饋"> 夥伴練習與彼此回饋</label>
+  <label><input type="checkbox" name="entry.learning_style" value="其他"> 其他（請說明）</label>
+</div>
+<h2>P5 - 軟硬體與支援系統</h2>
+
+<label>4. 您在參加實體課程時，最重視哪些配套條件？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.hardware_priority" value="課程講義／練習作業"> 課程講義／練習作業</label>
+  <label><input type="checkbox" name="entry.hardware_priority" value="教室空間舒適度"> 教室空間舒適度</label>
+  <label><input type="checkbox" name="entry.hardware_priority" value="課程時間配置"> 課程時間配置</label>
+  <label><input type="checkbox" name="entry.hardware_priority" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>5. 您會希望未來課程提供哪些輔助工具？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.support_tools" value="課前預習材料（文章、影片、任務等）"> 課前預習材料（文章、影片、任務等）</label>
+  <label><input type="checkbox" name="entry.support_tools" value="課中教材（講義／筆記）"> 課中教材（講義／筆記）</label>
+  <label><input type="checkbox" name="entry.support_tools" value="錄影回放或延伸觀看"> 錄影回放或延伸觀看</label>
+  <label><input type="checkbox" name="entry.support_tools" value="課後社群支持或持續陪伴群組"> 課後社群支持或持續陪伴群組</label>
+  <label><input type="checkbox" name="entry.support_tools" value="小組教練／同儕討論安排"> 小組教練／同儕討論安排</label>
+  <label><input type="checkbox" name="entry.support_tools" value="其他"> 其他（請說明）</label>
+</div>
+
+<h2>P6 - 價格與價值認知</h2>
+
+<label>7. 您認為什麼因素最影響您是否報名課程？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.price_factors" value="課程主題是否貼近需求"> 課程主題是否貼近需求</label>
+  <label><input type="checkbox" name="entry.price_factors" value="講師專業度與相關背景"> 講師專業度與相關背景</label>
+  <label><input type="checkbox" name="entry.price_factors" value="課程價格"> 課程價格</label>
+  <label><input type="checkbox" name="entry.price_factors" value="時間與地點是否方便"> 時間與地點是否方便</label>
+  <label><input type="checkbox" name="entry.price_factors" value="是否有朋友／教練推薦"> 是否有朋友／教練推薦</label>
+  <label><input type="checkbox" name="entry.price_factors" value="品牌價值觀是否認同"> 品牌價值觀是否認同</label>
+  <label><input type="checkbox" name="entry.price_factors" value="其他"> 其他（請說明）</label>
+</div>
+<h2>P7 - 課程形式偏好</h2>
+
+<label>1. 您偏好的課程形式為？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.course_format" value="完整實體課程"> 完整實體課程</label>
+  <label><input type="checkbox" name="entry.course_format" value="完全線上課程（直播或錄播）"> 完全線上課程（直播或錄播）</label>
+  <label><input type="checkbox" name="entry.course_format" value="線上＋實體混合（Hybrid）"> 線上＋實體混合（Hybrid）</label>
+  <label><input type="checkbox" name="entry.course_format" value="講座＋社群互動映射上架支持"> 講座＋社群互動映射上架支持</label>
+  <label><input type="checkbox" name="entry.course_format" value="視訊課輔性質彈性安排"> 視訊課輔性質彈性安排</label>
+  <label><input type="checkbox" name="entry.course_format" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>2. 您對哪些類型的主題活動較感興趣？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.topic_interest" value="自我探索課程（如情緒覺察、人生定位等）"> 自我探索課程（如情緒覺察、人生定位等）</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="領導與溝通（如管理進階、人際互動）"> 領導與溝通（如管理進階、人際互動）</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="教練類引導技術"> 教練類引導技術</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="創意力與表達（如書寫、創作、戲劇）"> 創意力與表達（如書寫、創作、戲劇）</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="身心整合與健康覺察（如靜心、冥想、飲食體驗）"> 身心整合與健康覺察（如靜心、冥想、飲食體驗）</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="學習導向（如輔導教學、小型教練）"> 學習導向（如輔導教學、小型教練）</label>
+  <label><input type="checkbox" name="entry.topic_interest" value="其他"> 其他主題建議（請說明）</label>
+</div>
+
+<label>3. 若我們未來固定舉辦主題活動，您期待的參與頻率為何？（單選）</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.event_frequency" value="每月一次"> 每月一次</label>
+  <label><input type="radio" name="entry.event_frequency" value="每季一次"> 每季一次</label>
+  <label><input type="radio" name="entry.event_frequency" value="不定期，根據主題而定"> 不定期，根據主題而定</label>
+  <label><input type="radio" name="entry.event_frequency" value="偶爾參加，有興趣主題才報名"> 偶爾參加，有興趣主題才報名</label>
+</div>
+
+<label>4. 對於主題型活動，您願意支付的合理價格與偏好形式為？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.event_price" value="NT$500–800／1.5 小時線上活動"> NT$500–800／1.5 小時線上活動</label>
+  <label><input type="checkbox" name="entry.event_price" value="NT$800–1,200／2 小時實體體驗活動"> NT$800–1,200／2 小時實體體驗活動</label>
+  <label><input type="checkbox" name="entry.event_price" value="NT$1,500–2,500／半天實體體驗＋討論"> NT$1,500–2,500／半天實體體驗＋討論</label>
+  <label><input type="checkbox" name="entry.event_price" value="NT$3,000–5,000／一日深度工作坊"> NT$3,000–5,000／一日深度工作坊</label>
+  <label><input type="checkbox" name="entry.event_price" value="願意視主題彈性參與與支付"> 願意視主題彈性參與與支付</label>
+</div>
+<h2>P8 平台使用相關問題（共同題）</h2>
+
+<label>1. 您目前是否曾使用過我們的相關線上平台（如：LINE 社群 / 網站 / 表單 / 報名系統）？（單選）</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.platform_use" value="有，經常使用"> 有，經常使用</label>
+  <label><input type="radio" name="entry.platform_use" value="有，偶爾使用"> 有，偶爾使用</label>
+  <label><input type="radio" name="entry.platform_use" value="有，但操作不佳"> 有，但操作不佳</label>
+  <label><input type="radio" name="entry.platform_use" value="沒有使用過"> 沒有使用過</label>
+  <label><input type="radio" name="entry.platform_use" value="不確定是否使用過"> 不確定是否使用過</label>
+</div>
+
+<label>2. 您平時偏好透過哪些方式接收我們的課程或活動資訊？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.preferred_channel" value="LINE 官方帳號或群組"> LINE 官方帳號或群組</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="Facebook 專頁或社團"> Facebook 專頁或社團</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="Instagram"> Instagram</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="Email 電子報"> Email 電子報</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="官方網站／部落格"> 官方網站／部落格</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="Google 日曆／提醒邀請"> Google 日曆／提醒邀請</label>
+  <label><input type="checkbox" name="entry.preferred_channel" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>3. 若未來有一個專屬學員平台，您期望它能包含哪些功能？（可複選）</label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="entry.desired_features" value="課程報名與付款功能"> 課程報名與付款功能</label>
+  <label><input type="checkbox" name="entry.desired_features" value="個人學習紀錄與回顧進度"> 個人學習紀錄與回顧進度</label>
+  <label><input type="checkbox" name="entry.desired_features" value="教材／影片／投影片集中下載區"> 教材／影片／投影片集中下載區</label>
+  <label><input type="checkbox" name="entry.desired_features" value="錄課回顧與補課專區"> 錄課回顧與補課專區</label>
+  <label><input type="checkbox" name="entry.desired_features" value="課程社群交流空間"> 課程社群交流空間</label>
+  <label><input type="checkbox" name="entry.desired_features" value="興趣或助教教練的留言或提問制度"> 興趣或助教教練的留言或提問制度</label>
+  <label><input type="checkbox" name="entry.desired_features" value="專屬提醒與行事曆整合"> 專屬提醒與行事曆整合</label>
+  <label><input type="checkbox" name="entry.desired_features" value="其他"> 其他（請說明）</label>
+</div>
+
+<label>4. 如果未來有一個整合所有學習資源的平台，請描述什麼樣的條件或設計會讓您願意長期登入使用？（簡答）</label>
+<textarea name="entry.platform_conditions" rows="3"></textarea>
+<h2>填寫結語與聯絡資訊</h2>
+
+<label>請問您願意讓我們後續聯繫，以進一步了解您的意見或邀請訪談嗎？（單選）</label>
+<div class="radio-group">
+  <label><input type="radio" name="entry.contact_permission" value="願意，歡迎進一步聯繫"> 願意，歡迎進一步聯繫</label>
+  <label><input type="radio" name="entry.contact_permission" value="可接受 Email 追蹤邀請"> 可接受 Email 追蹤邀請</label>
+  <label><input type="radio" name="entry.contact_permission" value="不希望被聯絡"> 不希望被聯絡</label>
+</div>
+
+<label>若您願意留下聯絡方式，請填寫以下欄位：</label>
+<input type="text" name="entry.contact_name" placeholder="姓名">
+<input type="email" name="entry.contact_email" placeholder="Email">
+<input type="text" name="entry.contact_line" placeholder="LINE ID 或其他方式（選填）">
+
+<label>最後，請留下您此份問卷的填寫心得與其他建議：</label>
+<textarea name="entry.final_feedback" rows="4"></textarea>
+</form>
+</body>
+</html>
